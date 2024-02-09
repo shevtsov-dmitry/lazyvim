@@ -14,3 +14,6 @@ map("n", "<leader>rz", ":!zig run %<CR>", { noremap = true })
 -- java
 map("n", "<leader>rj", ":!java %<CR>", { noremap = true })
 map("n", "<leader>raj", ":!java -ea %<CR>", { noremap = true })
+
+-- maven
+map("n", "<leader>mc", ":!mvn compile<CR>", { noremap = true })
