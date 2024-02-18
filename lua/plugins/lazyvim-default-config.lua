@@ -8,7 +8,11 @@ if true then return {} end
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
+
+-- Disable autoformat for lua files
+
 return {
+
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -17,11 +21,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-
       -- colorscheme = "catppuccin-latte",
 
       -- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-      colorscheme = "gruvbox",
+      -- colorscheme = "gruvbox",
     },
   },
 
@@ -93,6 +96,7 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
@@ -104,6 +108,7 @@ return {
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
+    settings = {},
     dependencies = {
       "jose-elias-alvarez/typescript.nvim",
       init = function()
@@ -116,6 +121,7 @@ return {
     },
     ---@class PluginLspOpts
     opts = {
+
       ---@type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
@@ -167,19 +173,7 @@ return {
   -- would overwrite `ensure_installed` with the new value.
   -- If you'd rather extend the default config, use the code below instead:
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      -- add tsx and treesitter
-      vim.list_extend(opts.ensure_installed, {
-        "tsx",
-        "typescript",
-      })
-    end,
-  },
-
-  -- the opts function can also be used to change the default opts:
-  {
-    "nvim-lualine/lualine.nvim",
+    "nvim-treesitter//lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
       table.insert(opts.sections.lualine_x, "😄")

@@ -4,16 +4,20 @@
 -- This file is automatically loaded by lazyvim.config.init
 local Util = require("lazyvim.util")
 
--- DO NOT USE THIS IN YOU OWN CONFIG!!
 -- use `vim.keymap.set` instead
 local map = Util.safe_keymap_set
--- map("n", "<F8>", ":!gcc % && ./a.out<CR>", { desc = "Compile and run current file with GCC", noremap = true })
-map("n", "<leader>rr", ":!gcc % && ./a.out<CR>", { desc = "Compile and run current file with GCC", noremap = true })
-map("n", "<leader>rz", ":!zig run %<CR>", { noremap = true })
+
+map("n", "<leader>rc", ":!gcc % && ./a.out<CR>", { desc = "[r]un [c] with GCC", noremap = true })
+map("n", "<leader>rr", ":!zig run %<CR>", { desc = "[r]un [z]ig", noremap = true })
 
 -- java
-map("n", "<leader>rj", ":!java %<CR>", { noremap = true })
-map("n", "<leader>raj", ":!java -ea %<CR>", { noremap = true })
+map("n", "<leader>rj", ":!java %<CR>", { desc = "[r]un [j]ava", noremap = true })
+map("n", "<leader>raj", ":!java -ea %<CR>", { desc = "[r]un with [a]ssertions enabled", noremap = true })
 
 -- maven
-map("n", "<leader>mc", ":!mvn compile<CR>", { noremap = true })
+map("n", "<leader>mc", ":!mvn compile<CR>", { desc = "[m]vn [c]ompile", noremap = true })
+
+-- FORMATS
+
+-- prettier
+map("n", "<leader>fm", ":!npx prettier . --write<CR>", { desc = "[f]ormat with prettier", noremap = true })
