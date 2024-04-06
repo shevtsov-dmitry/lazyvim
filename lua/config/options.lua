@@ -12,7 +12,7 @@ vim.g.autoformat = true
 -- * a function with signature `function(buf) -> string|string[]`
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 
-vim.go.background = "light"
+vim.go.background = "dark"
 
 local opt = vim.opt
 opt.autowrite = true -- Enable auto write

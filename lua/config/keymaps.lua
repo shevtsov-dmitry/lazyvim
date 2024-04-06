@@ -12,7 +12,7 @@ map("n", "<leader>rz", ":!zig run %<CR>", { desc = "[r]un [z]ig", noremap = true
 map("n", "<leader>rr", ":!zig build <CR>", { desc = "build zig project", noremap = true })
 
 -- java
-map("n", "<leader>rj", ":!java --source 21 --enable-preview %<CR>", { desc = "[r]un [j]ava", noremap = true })
+map("n", "<leader>rj", ":!java --source 22 --enable-preview %<CR>", { desc = "[r]un [j]ava", noremap = true })
 map(
     "n",
     "<leader>raj",

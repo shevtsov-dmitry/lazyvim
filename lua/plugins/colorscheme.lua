@@ -14,7 +14,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "melange",
+            colorscheme = "onedark",
             termguicolors = true,
         },
     },
