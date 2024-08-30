@@ -1,6 +1,15 @@
+vim.opt.termguicolors = true
+
 return {
-  { "nyoom-engineering/oxocarbon.nvim" }, -- dark, darker, cool, deep, warm, warmer
-  -- { "folke/tokyonight.nvim" }, -- night, day, storm, moon
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { "folke/tokyonight.nvim" }, -- night, day, storm, moon
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = {
+      variant = "moon", -- auto, main, moon, or dawn
+    },
+  },
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -18,9 +27,18 @@ return {
     },
   },
   {
+    "Mofiqul/vscode.nvim",
+    opts = {
+      -- transparent = true,
+      italic_comments = true,
+      -- disable_nvimtree_bg = true,
+      -- style = "light",
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "rose-pine",
     },
   },
 }
