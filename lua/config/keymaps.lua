@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 
 -- Map Ctrl + Backspace to delete the previous word
-vim.api.nvim_set_keymap("n", "<C-H>", "bdw", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<C-H>", "<Esc>bdwi", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-BS>", "bdw", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-BS>", "<Esc>bdwi", { noremap = true, silent = true })
 
 -- Map Alt + Backspace to delete the previous word
 vim.api.nvim_set_keymap("n", "<A-BS>", "bdw", { noremap = true, silent = true })
