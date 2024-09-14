@@ -27,7 +27,7 @@ return {
 
   ---@type Ollama.Config
   opts = {
-    model = "codellama:7b",
+    model = "codellama",
     -- model = "mistral-nemo:latest",
     url = "http://127.0.0.1:11434",
     -- serve = {

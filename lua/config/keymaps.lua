@@ -2,10 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Map Ctrl + Backspace to delete the previous word
-vim.api.nvim_set_keymap("n", "<C-BS>", "bdw", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<C-BS>", "<Esc>bdwi", { noremap = true, silent = true })
-
--- Map Alt + Backspace to delete the previous word
-vim.api.nvim_set_keymap("n", "<A-BS>", "bdw", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<A-BS>", "<Esc>bdwi", { noremap = true, silent = true })
+-- Map Alt + Backspace and Ctrl + Backspace to delete the previous word
+vim.api.nvim_set_keymap("n", "<C-BS>", "<C-W>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<A-BS>", "<C-W>", { noremap = true, silent = true })
