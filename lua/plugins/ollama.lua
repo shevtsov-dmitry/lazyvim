@@ -27,9 +27,9 @@ return {
 
   ---@type Ollama.Config
   opts = {
-    model = "codellama",
-    -- model = "mistral-nemo:latest",
-    url = "http://127.0.0.1:11434",
+    -- model = "llama3.1",
+    model = "codegemma:7b",
+    url = "http://192.168.0.105:11434",
     -- serve = {
     --   on_start = false,
     --   command = "ollama",

@@ -6,23 +6,23 @@ vim.g.autoformat = true
 local opt = vim.opt
 
 -- Check if running inside WSL
-if vim.fn.has("wsl") == 1 then
-  -- Set clipboard to use clip.exe
-  vim.g.clipboard = {
-    name = "clip.exe",
-    copy = {
-      ["+"] = "clip.exe",
-      ["*"] = "clip.exe",
-    },
-    paste = {
-      ["+"] = "powershell.exe -noprofile -command [Console]::Out.Write($(Get-Clipboard))",
-      ["*"] = "powershell.exe -noprofile -command [Console]::Out.Write($(Get-Clipboard))",
-    },
-    cache_enabled = 0,
-  }
-else
-  opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
-end
+-- if vim.fn.has("wsl") == 1 then
+--   -- Set clipboard to use clip.exe
+--   vim.g.clipboard = {
+--     name = "clip.exe",
+--     copy = {
+--       ["+"] = "clip.exe",
+--       ["*"] = "clip.exe",
+--     },
+--     paste = {
+--       ["+"] = "powershell.exe -noprofile -command [Console]::Out.Write($(Get-Clipboard))",
+--       ["*"] = "powershell.exe -noprofile -command [Console]::Out.Write($(Get-Clipboard))",
+--     },
+--     cache_enabled = 0,
+--   }
+-- else
+--   opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
+-- end
 
 opt.shiftwidth = 4
 opt.tabstop = 4
