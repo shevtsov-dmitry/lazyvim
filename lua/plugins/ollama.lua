@@ -27,9 +27,8 @@ return {
 
   ---@type Ollama.Config
   opts = {
-    -- model = "llama3.1",
-    model = "codegemma:7b",
-    url = "http://192.168.0.105:11434",
+    model = "codellama",
+    url = "http://localhost:11434",
     -- serve = {
     --   on_start = false,
     --   command = "ollama",
@@ -39,12 +38,23 @@ return {
     -- },
     -- View the actual default prompts in ./lua/ollama/prompts.lua
     prompts = {
-      -- Sample_Prompt = {
-      --   prompt = "This is a sample prompt that receives $input and $sel(ection), among others.",
-      --   input_label = "> ",
-      --   model = "codegemma:7b",
-      --   action = "display",
-      -- },
+      -- example prompt
+      -- prompt = 'This is a sample prompt that receives $input and $sel(ection), among others.',
+      Explain_English = {
+        -- prompt = 'This is a sample prompt that receives $input and $sel(ection), among others.',
+        prompt = "You are an english language teacher, I am not native with english language and you need to explain word or sentence to me simply clearly and easy. I ask you about clarifying $input in the context $sel",
+        input_label = "> ",
+        model = "llama3.1",
+        action = "display",
+      },
+
+      Translate_to_russian = {
+        -- prompt = 'This is a sample prompt that receives $input and $sel(ection), among others.',
+        prompt = "You are a talanted and proficient russian translator. You need to translate this: $sel",
+        input_label = "> ",
+        model = "llama3.1",
+        action = "display",
+      },
     },
   },
 }

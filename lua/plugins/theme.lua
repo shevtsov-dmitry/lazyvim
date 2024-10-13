@@ -35,11 +35,21 @@ return {
       -- style = "light",
     },
   },
+
+  {
+    "slugbyte/lackluster.nvim",
+    priority = 1000,
+    opts = {},
+    -- config = function(_, opts)
+    --   vim.cmd.colorscheme("lackluster")
+    -- end,
+  },
+
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "rose-pine",
-      colorscheme = "default",
+      colorscheme = "lackluster",
     },
   },
 }

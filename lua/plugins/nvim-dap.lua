@@ -5,8 +5,13 @@ return {
 
   dependencies = {
     {
+      "williamboman/mason.nvim",
+      opts = { ensure_installed = { "java-debug-adapter", "java-test" } },
+    },
+    {
       "rcarriga/nvim-dap-ui",
-      dependencies = { "nvim-neotest/nvim-nio" },
+      dependencies = { { "nvim-neotest/nvim-nio" } },
+
   -- stylua: ignore
   keys = {
     { "<leader>du", function() require("dapui").toggle({ }) end, desc = "Dap UI" },
