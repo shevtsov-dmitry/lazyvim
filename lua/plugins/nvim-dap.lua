@@ -6,7 +6,7 @@ return {
   dependencies = {
     {
       "williamboman/mason.nvim",
-      opts = { ensure_installed = { "java-debug-adapter", "java-test" } },
+      opts = { ensure_installed = {} },
     },
     {
       "rcarriga/nvim-dap-ui",

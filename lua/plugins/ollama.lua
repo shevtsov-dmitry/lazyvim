@@ -43,12 +43,11 @@ return {
     prompts = {
       -- example prompt
       -- prompt = 'This is a sample prompt that receives $input for input and $sel for selection, among others.',
-
       Implement_Java_Tests = {
         prompt = "You are developing tests for a method in java junit jupiter framework. You need to develop tests by example in the comments for each of the examples selected here: $sel",
         input_label = "> ",
         model = CODE_MODEL,
-        action = "display",
+        action = "insert",
       },
       Explain_English = {
         prompt = "You are an english language teacher, I am not native with english language and you need to explain word or sentence to me simply clearly and easy. I ask you about clarifying $input in the context $sel",
