@@ -24,6 +24,7 @@ local opt = vim.opt
 --   opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
 -- end
 
+opt.guicursor = ""
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.wrap = false
