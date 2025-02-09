@@ -31,3 +31,4 @@ opt.wrap = false
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.ignorecase = true -- Ignore case
 opt.relativenumber = false -- Relative line numbers
+-- vim.g.lazyvim_picker = "telescope"

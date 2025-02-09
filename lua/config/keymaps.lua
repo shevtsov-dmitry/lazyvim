@@ -3,5 +3,6 @@
 -- Add any additional keymaps here
 
 -- Map Alt + Backspace and Ctrl + Backspace to delete the previous word
-vim.api.nvim_set_keymap("n", "<C-BS>", "<C-W>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-BS>", "<C-W>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<A-BS>", "<C-W>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-.>", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
