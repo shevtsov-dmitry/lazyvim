@@ -25,8 +25,8 @@ local opt = vim.opt
 -- end
 
 opt.guicursor = ""
-opt.shiftwidth = 4
-opt.tabstop = 4
+opt.shiftwidth = 2
+opt.tabstop = 2
 opt.wrap = false
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.ignorecase = true -- Ignore case

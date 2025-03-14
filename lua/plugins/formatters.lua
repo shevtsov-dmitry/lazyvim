@@ -19,7 +19,7 @@ return {
     formatters = {
       google_java_format = {
         command = "google-java-format",
-        args = { "--aosp", "-i", "$FILENAME" }, -- Use file-based formatting
+        -- args = { "-i", "$FILENAME" }, -- Use file-based formatting . "--aosp" flag for 4 indent instead of default 2.
         stdin = false, -- Must be false, because google-java-format doesn't support stdin
       },
     },
